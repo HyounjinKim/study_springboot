@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 네트워크 환경에 따라서 늦게 들어 올 수 있다.
+        function doselect(){
+        fetch("http://localhost:8085/users")
+        .then(res => {
+        return res.json();
+        })
+        .then(data => {
+        console.log(data);
+        })
+        }
+
+        function dodelete(){
+        const a = [];
+        a.push(10);
+        a.push(20);
+        console.log(a);
+
+        const b = { a: "aa",b:"bb",c:function(){alert('함수');}};
+        console.log(b);
+        b.c();
+
+        const url = "http://localhost:8085/users/1";
+
+        fetch(url,{method:"delete",headers:{'Content-Type' : 'application/json'}})
+        .then(res => {
+        return res.text();
+        })
+        .then(data => {
+        console.log(data);
+        })
+        }
+    </script>
+</head>
+<body>
+<h1>aa.html</h1>
+<button onclick="doselect()">조회</button>
+<button onclick="dodelete()">삭제</button>
+</body>
+</html>

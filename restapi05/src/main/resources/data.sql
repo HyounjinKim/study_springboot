@@ -1,0 +1,2 @@
+insert into member (email,username,password,role) values ('aaa@naver.com','홍길동','$2a$10$3HQDv3vdk1wdTKfc5Y8tPuPAsZNbvD9YErissluzPtwjWL1uo4NuW','USER');
+insert into member (email,password,role,username) values ('qqq@qq.qq','$2a$10$3HQDv3vdk1wdTKfc5Y8tPuPAsZNbvD9YErissluzPtwjWL1uo4NuW','USER','qqq');

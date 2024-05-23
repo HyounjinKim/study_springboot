@@ -1,0 +1,31 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(ThU5fHkuU+ffqS7PwkJ5nOfBXV3OJsG5h7eLmgquvqi9Oxv9owBU9osjhgg3pJxnfsDa0QSwrRktJXy5NqHewF4iRyJp0hpEcH1qthqEveP5nH+M0S7+JJXWfJ0gY4CWx0xJ1ygRemu1+RxX+r8kFxVLCmwIBF+uuDZFX3Pcwyg=)
+    username: ENC(oDtcR3TEG35N7AoR4ikjBA==)
+    password: ENC(3swEySlOuMysxpZ8WiQQ4g==)
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+
+jasypt:
+  encryptor:
+    password: ${PASSWORD}
+
+aa:
+  bb: aaa

@@ -1,0 +1,48 @@
+server:
+  port: 8089
+
+spring:
+  messages:
+    basename: messages
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+#  sql:
+#    init:
+#      mode: always
+
+multipart:
+  max-file-size: 10MB
+  max-request-size: 10MB
+  file-size-threshold: 0
+
+kakao:
+  client:
+    id: c901301908216a1c45d3b26574aaae43
+    secret: 1ClWJmtSiBZjMObyiTYEDnRvOTIFViCs
+    redirect: http://localhost:8089/oauth/kakao/callback
+
+toss:
+  client:
+    secret: test_sk_ZLKGPx4M3MPEyMbL6ajw8BaWypv1
+
+
+
